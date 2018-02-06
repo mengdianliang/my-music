@@ -41,13 +41,12 @@
     npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
     github网址：https://github.com/hilongjw/vue-lazyload
-    使用：
-      main.js中
-      Vue.use(VueLazyload, {
-        loading: require('./common/image/default.png')
-      })
-      图片元素上：
-      <img width="60" height="60" v-lazy="item.imgurl"/>
+    main.js中
+    Vue.use(VueLazyload, {
+      loading: require('./common/image/default.png')
+    })
+    图片元素上：
+    <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
   ```bash
