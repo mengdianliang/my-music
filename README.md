@@ -37,7 +37,7 @@
 * store: 一些共享状态管理
 #### 好用的插件
 * 图片懒加载：
-  ```
+  ```bash
   npm i -D vue-lazyload
   import VueLazyload from 'vue-lazyload'
   github网址：https://github.com/hilongjw/vue-lazyload
@@ -50,7 +50,7 @@
   <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
-  ```
+  ```bash
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
@@ -99,7 +99,7 @@
   }
   ```
 * 本地存储
-  ```
+  ```bash
   npm install good-storage
   import storage from 'good-storage'
   github网址：https://github.com/ustbhuangyi/storage
@@ -126,7 +126,7 @@
   forEach the storages and call the callback 
   ```
 * js-base64
-  ```
+  ```bash
   npm install --save js-base64
   import { Base64 } from 'js-base64';
   github网址：https://github.com/dankogai/js-base64
