@@ -37,6 +37,7 @@
 * store: 一些共享状态管理
 #### 好用的插件
 * 图片懒加载：
+  ```
   npm i -D vue-lazyload
   import VueLazyload from 'vue-lazyload'
   github网址：https://github.com/hilongjw/vue-lazyload
@@ -45,10 +46,11 @@
   Vue.use(VueLazyload, {
     loading: require('./common/image/default.png')
   })
-
   图片元素上：
   <img width="60" height="60" v-lazy="item.imgurl"/>
+  ```
 * jsonp插件
+  ```
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
@@ -95,7 +97,9 @@
     }
     return jsonp(url, data, options)
   }
+  ```
 * 本地存储
+  ```
   npm install good-storage
   import storage from 'good-storage'
   github网址：https://github.com/ustbhuangyi/storage
@@ -120,7 +124,9 @@
 
   forEach(callback)
   forEach the storages and call the callback 
+  ```
 * js-base64
+  ```
   npm install --save js-base64
   import { Base64 } from 'js-base64';
   github网址：https://github.com/dankogai/js-base64
@@ -133,6 +139,7 @@
   Base64.decode('5bCP6aO85by+');  // 小飼弾
   // note .decodeURI() is unnecessary since it accepts both flavors
   Base64.decode('5bCP6aO85by-');  // 小飼弾
+  ```
   ### 难点
 
 #### player组件
