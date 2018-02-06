@@ -24,9 +24,116 @@
 *  Axios
 
 #### src目录结构
+* api：用来请求服务器端数据的，通过`jsonp`和`axios`发送请求，服务端代理，需要在`config/index.js`中设置代理接口
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:9000'
+      }
+    }
+* base: 存放一些基础的组件 
+* common: 存放字体、图片、样式、工具类文件
+* components: 存放一些视图组件
+* router: 配置路由
+* store: 一些共享状态管理
+#### 好用的插件
+* 图片懒加载：
+  npm i -D vue-lazyload
+  import VueLazyload from 'vue-lazyload'
+  github网址：https://github.com/hilongjw/vue-lazyload
+  使用：
+  main.js中
+  Vue.use(VueLazyload, {
+    loading: require('./common/image/default.png')
+  })
 
+  图片元素上：
+  <img width="60" height="60" v-lazy="item.imgurl"/>
+* jsonp插件
+  npm i -S jsonp
+  import originJSONP from 'jsonp'
+  github网址：https://github.com/webmodules/jsonp
+  封装：
+  export default function jsonp(url, data, option) {
+    url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
+    return new Promise((resolve, reject) => {
+      originJSONP(url, option, (err, data) => {
+        if (!err) {
+          resolve(data)
+        } else {
+          reject(err)
+        }
+      })
+    })
+  }
 
-### 难点
+  function param(data) {
+    let url = ''
+    for (let k in data) {
+      let value = data[k] !== undefined ? data[k] : ''
+      url += `&${k}=${encodeURIComponent(value)}`
+    }
+    return url ? url.substring(1) : ''
+  }
+  使用：
+  import jsonp from 'common/js/jsonp'
+
+  export function getRecommend() {
+    const url = 'https://shc.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
+    const options = {
+      param: 'jsonpCallback'
+    }
+    const data = {
+      g_tk: 5381,
+      inCharset: 'utf-8',
+      outCharset: 'utf-8',
+      notice: 0,
+      format: 'jsonp',
+      platform: 'h5',
+      uin: 0,
+      needNewCode: 1,
+      _: 1515922621811
+    }
+    return jsonp(url, data, options)
+  }
+* 本地存储
+  npm install good-storage
+  import storage from 'good-storage'
+  github网址：https://github.com/ustbhuangyi/storage
+  使用:
+  set(key, val)
+  set storage with key and val
+
+  get(key, def)
+  get storage with key, return def if not find
+
+  remove(key)
+  remove storage with key
+
+  has(key)
+  determine storage has the key
+
+  clear()
+  clear all storages
+
+  getAll()
+  get all the storages
+
+  forEach(callback)
+  forEach the storages and call the callback 
+* js-base64
+  npm install --save js-base64
+  import { Base64 } from 'js-base64';
+  github网址：https://github.com/dankogai/js-base64
+  使用:
+  Base64.encode('dankogai');  // ZGFua29nYWk=
+  Base64.encode('小飼弾');    // 5bCP6aO85by+
+  Base64.encodeURI('小飼弾'); // 5bCP6aO85by-
+
+  Base64.decode('ZGFua29nYWk=');  // dankogai
+  Base64.decode('5bCP6aO85by+');  // 小飼弾
+  // note .decodeURI() is unnecessary since it accepts both flavors
+  Base64.decode('5bCP6aO85by-');  // 小飼弾
+  ### 难点
 
 #### player组件
 讲一讲`player`	播放器组件，播放器组件可谓是整个项目的核心，当然数据处理和用户体验方面也是不简单的（逃。
