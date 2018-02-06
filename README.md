@@ -84,8 +84,9 @@
 为了减少流量，图片加载使用了懒加载的方式，滚动时再加载真实的图片。
 
 ### 效果
-![](https://oc1gyfe6q.qnssl.com/17-7-28/29546400.jpg)
-![](https://oc1gyfe6q.qnssl.com/17-7-28/80941247.jpg)
+![](https://github.com/mengdianliang/my-music/blob/master/show/player1.png)
+![](https://github.com/mengdianliang/my-music/blob/master/show/player2.png)
+![](https://github.com/mengdianliang/my-music/blob/master/show/player3.png)
 ### 构建
 #### 开发环境
 
