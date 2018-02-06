@@ -37,15 +37,15 @@
 * store: 一些共享状态管理
 #### 好用的插件
 * 图片懒加载：
-  ```python
+  ```bash
     npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
     github网址：https://github.com/hilongjw/vue-lazyload
-    // main.js中
+    
     Vue.use(VueLazyload, {
       loading: require('./common/image/default.png')
     })
-    // 图片元素上：
+
     <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
@@ -53,7 +53,7 @@
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
-  // 封装：
+  
   export default function jsonp(url, data, option) {
     url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
     return new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@
     }
     return url ? url.substring(1) : ''
   }
-   // 使用：
+   
   import jsonp from 'common/js/jsonp'
 
   export function getRecommend() {
