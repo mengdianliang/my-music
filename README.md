@@ -36,7 +36,7 @@
 * router: 配置路由
 * store: 一些共享状态管理
 #### 好用的插件
-* 图片懒加载：
+* 图片懒加载
   ``` bash
     npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
@@ -57,7 +57,7 @@
 * js-base64
   ``` bash
   npm install --save js-base64
-  import { Base64 } from 'js-base64';
+  import { Base64 } from 'js-base64'
   github网址：https://github.com/dankogai/js-base64
   ```
   ### 难点
