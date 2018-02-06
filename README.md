@@ -14,23 +14,17 @@
 * [x] 搜索
 * [x] 用户中心
 * [x] 歌曲播放
-
-#### 数据来源
-所有数据都来自于QQ音乐，抓取自QQ的接口，大部分接口都是JSONP，抓取比较容易，其中一些接口限制了`host`，不能直接抓取，采用的方法是用`axios`代理，设置`header`，以此绕过`host`的限制。
-PS：具体代码请看`prod.server.js`文件
-
 #### 技术栈
 > 
-* [x] Vue
-* [x] Vuex
-* [x] Vue-Router
-* [x] Vue-cli
-* [x] Stylus
-* [x] Axios
-* [x] ESlint
+*  Vue
+*  Vuex
+*  Vue-Router
+*  Vue-cli
+*  Stylus
+*  Axios
 
 #### src目录结构
-![](https://oc1gyfe6q.qnssl.com/17-7-27/71529472.jpg)
+
 
 ### 难点
 
@@ -74,23 +68,10 @@ PS：具体代码请看`prod.server.js`文件
 ``` bash
 # install dependencies
 npm install
-
+# start server
+node server/app.js
 # serve with hot reload at localhost:8080
 npm run dev
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-#### 生产环境
-
-``` bash
-# build for production with minification
-npm run build
-# run
-node prod.server.js
 ```
 ### 总结
 通过学习该项目，自己收获了许多，实践中也遇到了大大小小许多问题，通过断点调试等最终解决了，对我来说无疑是最大的鼓励，也希望能与大家一起学习。
