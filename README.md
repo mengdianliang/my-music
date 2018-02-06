@@ -38,16 +38,16 @@
 #### 好用的插件
 * 图片懒加载：
   ```bash
-  npm i -D vue-lazyload
-  import VueLazyload from 'vue-lazyload'
-  github网址：https://github.com/hilongjw/vue-lazyload
-  使用：
-  main.js中
-  Vue.use(VueLazyload, {
-    loading: require('./common/image/default.png')
-  })
-  图片元素上：
-  <img width="60" height="60" v-lazy="item.imgurl"/>
+    npm i -D vue-lazyload
+    import VueLazyload from 'vue-lazyload'
+    github网址：https://github.com/hilongjw/vue-lazyload
+    使用：
+    main.js中
+    Vue.use(VueLazyload, {
+      loading: require('./common/image/default.png')
+    })
+    图片元素上：
+    <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
   ```bash
@@ -67,7 +67,6 @@
       })
     })
   }
-
   function param(data) {
     let url = ''
     for (let k in data) {
@@ -76,7 +75,7 @@
     }
     return url ? url.substring(1) : ''
   }
-  使用：
+   使用：
   import jsonp from 'common/js/jsonp'
 
   export function getRecommend() {
