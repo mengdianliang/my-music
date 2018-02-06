@@ -41,11 +41,11 @@
     npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
     github网址：https://github.com/hilongjw/vue-lazyload
-    main.js中
+    // main.js中
     Vue.use(VueLazyload, {
       loading: require('./common/image/default.png')
     })
-    图片元素上：
+    // 图片元素上：
     <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
@@ -53,7 +53,7 @@
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
-  封装：
+  // 封装：
   export default function jsonp(url, data, option) {
     url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
     return new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@
     }
     return url ? url.substring(1) : ''
   }
-   使用：
+   // 使用：
   import jsonp from 'common/js/jsonp'
 
   export function getRecommend() {
@@ -101,7 +101,7 @@
   npm install good-storage
   import storage from 'good-storage'
   github网址：https://github.com/ustbhuangyi/storage
-  使用:
+  // 使用:
   set(key, val)
   set storage with key and val
 
@@ -128,7 +128,7 @@
   npm install --save js-base64
   import { Base64 } from 'js-base64';
   github网址：https://github.com/dankogai/js-base64
-  使用:
+  // 使用:
   Base64.encode('dankogai');  // ZGFua29nYWk=
   Base64.encode('小飼弾');    // 5bCP6aO85by+
   Base64.encodeURI('小飼弾'); // 5bCP6aO85by-
