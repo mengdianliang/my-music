@@ -41,102 +41,24 @@
     npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
     github网址：https://github.com/hilongjw/vue-lazyload
-    
-    Vue.use(VueLazyload, {
-      loading: require('./common/image/default.png')
-    })
-
-    <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
-  ``` python
+  ``` bash
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
-  
-  export default function jsonp(url, data, option) {
-    url += (url.indexOf('?') < 0 ? '?' : '&') + param(data)
-    return new Promise((resolve, reject) => {
-      originJSONP(url, option, (err, data) => {
-        if (!err) {
-          resolve(data)
-        } else {
-          reject(err)
-        }
-      })
-    })
-  }
-  function param(data) {
-    let url = ''
-    for (let k in data) {
-      let value = data[k] !== undefined ? data[k] : ''
-      url += `&${k}=${encodeURIComponent(value)}`
-    }
-    return url ? url.substring(1) : ''
-  }
-   
-  import jsonp from 'common/js/jsonp'
-
-  export function getRecommend() {
-    const url = 'https://shc.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
-    const options = {
-      param: 'jsonpCallback'
-    }
-    const data = {
-      g_tk: 5381,
-      inCharset: 'utf-8',
-      outCharset: 'utf-8',
-      notice: 0,
-      format: 'jsonp',
-      platform: 'h5',
-      uin: 0,
-      needNewCode: 1,
-      _: 1515922621811
-    }
-    return jsonp(url, data, options)
-  }
   ```
 * 本地存储
-  ```bash
+  ``` bash
   npm install good-storage
   import storage from 'good-storage'
   github网址：https://github.com/ustbhuangyi/storage
-  // 使用:
-  set(key, val)
-  set storage with key and val
-
-  get(key, def)
-  get storage with key, return def if not find
-
-  remove(key)
-  remove storage with key
-
-  has(key)
-  determine storage has the key
-
-  clear()
-  clear all storages
-
-  getAll()
-  get all the storages
-
-  forEach(callback)
-  forEach the storages and call the callback 
   ```
 * js-base64
-  ```bash
+  ``` bash
   npm install --save js-base64
   import { Base64 } from 'js-base64';
   github网址：https://github.com/dankogai/js-base64
-  // 使用:
-  Base64.encode('dankogai');  // ZGFua29nYWk=
-  Base64.encode('小飼弾');    // 5bCP6aO85by+
-  Base64.encodeURI('小飼弾'); // 5bCP6aO85by-
-
-  Base64.decode('ZGFua29nYWk=');  // dankogai
-  Base64.decode('5bCP6aO85by+');  // 小飼弾
-  // note .decodeURI() is unnecessary since it accepts both flavors
-  Base64.decode('5bCP6aO85by-');  // 小飼弾
   ```
   ### 难点
 
