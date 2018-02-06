@@ -37,8 +37,8 @@
 * store: 一些共享状态管理
 #### 好用的插件
 * 图片懒加载：
-  ```bash
-    npm i -D vue-lazyload
+  ```python
+    npm i -D vue-lazyload
     import VueLazyload from 'vue-lazyload'
     github网址：https://github.com/hilongjw/vue-lazyload
     // main.js中
@@ -49,7 +49,7 @@
     <img width="60" height="60" v-lazy="item.imgurl"/>
   ```
 * jsonp插件
-  ```bash
+  ```python
   npm i -S jsonp
   import originJSONP from 'jsonp'
   github网址：https://github.com/webmodules/jsonp
