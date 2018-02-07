@@ -37,7 +37,7 @@
 * store: 一些共享状态管理
 
 #### 好用的插件
-###### 图片懒加载
+* 图片懒加载
   ``` bash
   npm i -D vue-lazyload
   import VueLazyload from 'vue-lazyload'
