@@ -39,7 +39,7 @@
 #### 好用的插件
 * 图片懒加载
   ``` bash
-  npm i -D lazyload
+  npm install vue-lazyload -D
   import VueLazyload from 'vue-lazyload'
   github网址：https://github.com/hilongjw/vue-lazyload
   ```
