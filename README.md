@@ -37,7 +37,12 @@
 * store: 一些共享状态管理
 
 #### 好用的插件
-
+* 图片懒加载
+  ``` bash
+  npm i -S jsonp
+  import originJSONP from 'jsonp'
+  github网址：https://github.com/webmodules/jsonp
+  ```
 * jsonp插件
   ``` bash
   npm i -S jsonp
