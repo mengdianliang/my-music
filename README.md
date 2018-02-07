@@ -39,9 +39,8 @@
 #### 好用的插件
 * 图片懒加载
   ``` bash
-  npm i -S jsonp
-  import originJSONP from 'jsonp'
-  github网址：https://github.com/webmodules/jsonp
+  
+  github网址：https://github.com/hilongjw/vue-lazyload
   ```
 * jsonp插件
   ``` bash
